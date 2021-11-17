@@ -5,11 +5,7 @@ pipeline {
         jdk "jdk-17.0.1"
     }
     stages {
-        stage("Env Variables") {
-            steps {
-                bat "printenv"
-            }
-        }
+
         stage('Build') {
             steps {
                 bat 'mvn -B -DskipTests clean package'
